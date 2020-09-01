@@ -6,6 +6,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import {FormsModule } from '@angular/forms';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { HttpClientmodule } from '@angular/common/http';
+import {SearchRequestService } from './search-request.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +18,11 @@ import { SearchFormComponent } from './search-form/search-form.component';
   imports: [
     BrowserModule,
     Routingmodule,
-    FormsModule
+    FormsModule,
+    HttpClientmodule
   ],
   providers: [],
+  providers:[SearchRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
